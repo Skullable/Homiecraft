@@ -1,0 +1,104 @@
+.container {
+  background-color: blue;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .wrapper{
+    background-color: blue;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@keyframes bobAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .component {
+    animation: bobAnimation 3s infinite;
+  }
+
+.box {
+  background-color: #2d2f34;
+  width: 400px;
+  height: 600px;
+  margin: 25px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  animation: bobAnimation 3s infinite;
+
+  animation: bob 3s timing-function delay iteration-count direction fill-mode;
+
+
+      .playerhead{
+        border-radius: 8px;
+      }
+
+      .playerinfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .name{
+            color: white;
+            font-family:monospace;
+            font-size: 35px;
+        }
+
+        .desc{
+            color: white;
+            font-family:monospace;
+            font-size: 16px;
+        }
+      }
+    
+      .infobtn {
+        margin: 10px;
+        width: 150px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: 2s;
+
+        .btntxt{
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+
+        
+      }
+      .infobtn:hover{
+        background-color: aqua;
+        color: black;
+        transform: translateY(-10px);
+        transition: 1s;
+
+    }
+
+}
+
+.box:hover{
+    animation:  none;
+    transition: 1s;
+}

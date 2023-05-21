@@ -1,0 +1,27 @@
+.front{
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    object-fit: cover;
+
+    .heading{
+        z-index: 2;
+        position: absolute;
+        width: 35%;
+        height: 35%;
+        justify-content: center;
+
+    }
+
+    .bgvid {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 90%;
+        opacity: 30%;
+    }
+
+}
