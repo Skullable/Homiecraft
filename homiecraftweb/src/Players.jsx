@@ -21,12 +21,15 @@ function Playerbox(props){
  function Players(){
     return (
       <div className="container">
+        <h1 className='title'>MEMBERS</h1>
         <div className="wrapper">
           <Playerbox name="Skullable" desc="hes a pretty cool guy" />
           <Playerbox name="OnyxRare" desc="hes a pretty cool guy" />
           <Playerbox name="Lime_Terror" desc="hes a pretty cool guy" />
           <Playerbox name="Mmessedd" desc="shes a pretty cool gal" />
           <Playerbox name="Mr_Minehunter" desc="hes a pretty cool guy" />
+          <Playerbox name="MGoku42" desc="hes a pretty cool guy" />
+          <Playerbox name="Unknownghost__" desc="hes a pretty cool guy" />
         </div>
       </div>
     );
