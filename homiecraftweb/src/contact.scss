@@ -1,3 +1,56 @@
+.profile-embed {
+    display: flex;
+    align-items: center;
+    background-color:  #242327;
+    border-radius: 8px;
+    padding: 10px;
+    width: 400px;
+    height: 100px;
+    z-index: 3;
+  
+    .banner {
+      height: 80px;
+      background-color: #7289da;
+    }
+  
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+    }
+  
+    .info {
+      margin-left: 10px;
+  
+      .username {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+  
+      .status {
+        display: flex;
+        align-items: center;
+        color: #8e9297;
+        font-size: 16px;
+  
+        .status-icon {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #43b581;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  
+
+
+
 .contact{
     display: flex;
     flex-direction: column;
@@ -5,9 +58,9 @@
     justify-content: center;
     height: 100vh;
     .container{
+        position: static;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         width: 100vw;
         display: flex;
         justify-content:space-evenly;
@@ -17,17 +70,26 @@
         .wrapper{
             position: absolute;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
+            height: 700px;
+            margin-bottom: 300px;
 
             .title{        
-                position: absolute;
+                position:static;
                 z-index: 3;
             }
-            .discord{
-                border-radius: 10px;
-                z-index: 5;
+
+            .profiles{
+              position: static;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-around;
+              width: 100%;
             }
+
         }
 
     

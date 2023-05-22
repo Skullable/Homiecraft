@@ -1,35 +1,40 @@
 
 import './Players.scss'
+import { useState } from 'react'
+import Player_profile from './Player_profile'
 
 
-
-
-function Playerbox(props){
-
-    const link = 'https://minotar.net/avatar/'
-    const size = '/90'
+function Playerbox(props) {
+  const [menuOpen,setMenuOpen] = useState(false)
+  const link = 'https://minotar.net/avatar/'
+  const size = '/90'
+  console.log(menuOpen)
 
     return(
-    <div className="box">
-        <img className="playerhead" src={`${link}${props.name}${size}`} alt="" />
-        <div className="playerinfo"><h2 className='name'>{props.name}</h2><h4 className='desc'>{props.desc}</h4></div>
-        <div className="infobtn"><h3 className='btntxt'>MORE INFO</h3></div>
-    </div>
+      <>
+      
+        <div className="box">
+          <img className="playerhead" src={`${link}${props.name}${size}`} alt="" />
+          <div className="playerinfo"><h2 className='name'>{props.name}</h2><h4 className='desc'>{props.desc}</h4></div>
+          <div className="infobtn" onClick={() => setMenuOpen(!menuOpen)} ><h3 className='btntxt'>MORE INFO</h3></div>
+        </div>
+        {menuOpen && <Player_profile name={props.name} value={[menuOpen,setMenuOpen]}/>}
+      </>
     )
 }
 
  function Players(){
+  const [menuOpen,setMenuOpen] = useState(false)
+  const names = ['Skullable','OnyxRare','Lime_Terror','mmessedd','Mr_Minehunter','Mgoku42','Unknownghost__'];
+  const nameList = names.map((name, index) => (
+    <><Playerbox name={name} key={index}>{name}</Playerbox>
+{/*    <Player_profile name={name}></Player_profile>*/}</>
+  ));
     return (
       <div className="container">
         <h1 className='title'>MEMBERS</h1>
         <div className="wrapper">
-          <Playerbox name="Skullable" desc="hes a pretty cool guy" />
-          <Playerbox name="OnyxRare" desc="hes a pretty cool guy" />
-          <Playerbox name="Lime_Terror" desc="hes a pretty cool guy" />
-          <Playerbox name="Mmessedd" desc="shes a pretty cool gal" />
-          <Playerbox name="Mr_Minehunter" desc="hes a pretty cool guy" />
-          <Playerbox name="MGoku42" desc="hes a pretty cool guy" />
-          <Playerbox name="Unknownghost__" desc="hes a pretty cool guy" />
+          {nameList}
         </div>
       </div>
     );

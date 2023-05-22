@@ -1,0 +1,100 @@
+.Player_profile{
+    height: 80vh;
+    width: 80vw;
+    background-color: #242327;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+    border-radius: 25px;
+    margin: 100px;
+    position: absolute;
+    z-index: 10;
+
+
+    .heading{
+        margin: 10px;
+        font-family: monospace;
+        color: white;
+        font-size: 50px;
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+        background-color: #242327;
+        margin: 10px;
+        border-radius: 25px;
+
+        .skinwrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .skin{
+                width: 300px;
+            }
+            
+            .downloadbtn{
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                background-color: aqua;
+                width: 220px;
+                height: 50px;
+                border: black 10px;
+                align-items: center;
+                color: black;
+                border-radius: 15px;
+                margin: 30px;
+    
+                .dllink{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    color: black;
+                    text-decoration: none;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 700;
+                    font-size: 20px;
+                    
+    
+                    .svg{
+                        margin: 10px;
+                    }
+    
+                }
+    
+            }
+        }
+    
+        .playerinfo{
+            display: flex;
+            flex-direction: column;
+            padding: 100px;
+    
+            .txt{
+                margin: 10px;
+                border-radius: 12px;
+                background-color: #3e4146;
+                color: #f0f0f1;
+                width: 500px;
+    
+                .h2{
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 22px;
+                    padding: 7px;
+                }
+            }
+        }
+    }
+
+    .svg{
+        color: white;
+        top: 0;
+        cursor: pointer;
+    }
+
+
+}
