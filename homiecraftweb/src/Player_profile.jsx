@@ -3,16 +3,27 @@ import Players from './Players';
 
 
 function httpGet(theUrl) {
-  const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // CORS proxy URL
-  const urlWithProxy = `${proxyUrl}${theUrl}`;
-
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open('GET', urlWithProxy, false); // false for synchronous request
-  xmlHttp.setRequestHeader('Origin', window.location.origin); // Set the 'Origin' header
-  xmlHttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); // Set the 'X-Requested-With' header
-  xmlHttp.send(null);
-  return xmlHttp.responseText;
-}
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // CORS proxy URL
+    const urlWithProxy = `${proxyUrl}${theUrl}`;
+  
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open('GET', urlWithProxy, false); // false for synchronous request
+    xmlHttp.setRequestHeader('Origin', window.location.origin); // Set the 'Origin' header
+    xmlHttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); // Set the 'X-Requested-With' header
+    try {
+      xmlHttp.send(null);
+      if (xmlHttp.status >= 200 && xmlHttp.status < 300) {
+        return xmlHttp.responseText;
+      } else {
+        throw new Error(`HTTP status ${xmlHttp.status}`);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle the error here or throw it to be handled at a higher level
+      throw error;
+    }
+  }
+  
 
 
 export default function Player_profile({ menuOpen,setMenuOpen ,...props }) {
