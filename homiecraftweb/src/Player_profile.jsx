@@ -3,7 +3,7 @@ import Players from './Players';
 
 
 function httpGet(theUrl) {
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // CORS proxy URL
+    const proxyUrl = 'https://api.allorigins.win/raw?url='; // CORS proxy URL
     const urlWithProxy = `${proxyUrl}${theUrl}`;
   
     var xmlHttp = new XMLHttpRequest();
