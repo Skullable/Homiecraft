@@ -2,21 +2,27 @@ import './Player_profile.scss'
 import Players from './Players';
 
 
-function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+function httpGet(theUrl) {
+  const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // CORS proxy URL
+  const urlWithProxy = `${proxyUrl}${theUrl}`;
+
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open('GET', urlWithProxy, false); // false for synchronous request
+  xmlHttp.setRequestHeader('Origin', window.location.origin); // Set the 'Origin' header
+  xmlHttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); // Set the 'X-Requested-With' header
+  xmlHttp.send(null);
+  return xmlHttp.responseText;
 }
+
 
 export default function Player_profile({ menuOpen,setMenuOpen ,...props }) {
     const link = 'https://api.mojang.com/users/profiles/minecraft/'
+    const skinlink = 'https://visage.surgeplay.com/full/'
+    const skindownload = 'https://minotar.net/download/'
     var response = httpGet(`${link}${props.name}`)
     var result = JSON.parse(response)
     var UUID = result.id
-    const skinlink = 'https://visage.surgeplay.com/full/'
-    const skindownload = 'https://minotar.net/download/'
+    
 
   return (
     <>
