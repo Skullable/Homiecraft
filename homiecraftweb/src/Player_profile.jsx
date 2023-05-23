@@ -8,7 +8,6 @@ function httpGet(theUrl) {
   
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open('GET', urlWithProxy, false); // false for synchronous request
-    xmlHttp.setRequestHeader('Origin', window.location.origin); // Set the 'Origin' header
     xmlHttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); // Set the 'X-Requested-With' header
     try {
       xmlHttp.send(null);
