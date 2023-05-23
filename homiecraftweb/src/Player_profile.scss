@@ -118,12 +118,12 @@
 
 }
 
-@media (max-width:1520px) {
+@media (max-width:1550px) {
         .menu{
 //            flex-direction: column;
 
             .wrapper{
-//                flex-direction: column;
+                flex-direction: row;
 
                 .playerinfo{
                     padding: 20px;
