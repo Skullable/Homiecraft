@@ -26,7 +26,7 @@ function Playerbox(props) {
  function Players(){
   const names = ['Skullable','OnyxRare','Lime_Terror','mmessedd','Mr_Minehunter','Mgoku42','Unknownghost__'];
   const nameList = names.map((name, index) => (
-    <><Playerbox menuOpen={menuOpen} setMenuOpen={setMenuOpen}name={name} key={index} >{name}</Playerbox>
+    <><Playerbox name={name} key={index} ></Playerbox>
     </>
   ));
   
