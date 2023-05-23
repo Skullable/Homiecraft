@@ -1,16 +1,19 @@
-.Player_profile{
-    height: 80vh;
-    width: 80vw;
-    background-color: #242327;
-    border-radius: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content:space-around;
-    border-radius: 25px;
-    margin: 100px;
-    position: absolute;
-    z-index: 10;
+.menu{
+    
+    &.active{
+            height: 80vh;
+            width: 80vw;
+            background-color: #242327;
+            border-radius: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content:space-around;
+            border-radius: 25px;
+            margin: 100px;
+            position: absolute;
+            z-index: 10;
+    }
 
 
     .heading{

@@ -10,7 +10,7 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 
-export default function Player_profile(props) {
+export default function Player_profile({ menuOpen,setMenuOpen ,...props }) {
     const link = 'https://api.mojang.com/users/profiles/minecraft/'
     var response = httpGet(`${link}${props.name}`)
     var result = JSON.parse(response)
@@ -20,7 +20,7 @@ export default function Player_profile(props) {
 
   return (
         <>
-    <div className='Player_profile'>
+    <div className={"menu " +(menuOpen && "active")}>
         <h1 className='heading'>Player info</h1>
         <div className="wrapper">
         <div className="skinwrapper">
@@ -33,7 +33,7 @@ export default function Player_profile(props) {
             <div className="txt"><h2 className='h2'>Description:</h2></div>
         </div>
         </div>
-        <svg className='svg' xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 15 15"><path fill="currentColor" d="M3.64 2.27L7.5 6.13l3.84-3.84A.92.92 0 0 1 12 2a1 1 0 0 1 1 1a.9.9 0 0 1-.27.66L8.84 7.5l3.89 3.89A.9.9 0 0 1 13 12a1 1 0 0 1-1 1a.92.92 0 0 1-.69-.27L7.5 8.87l-3.85 3.85A.92.92 0 0 1 3 13a1 1 0 0 1-1-1a.9.9 0 0 1 .27-.66L6.16 7.5L2.27 3.61A.9.9 0 0 1 2 3a1 1 0 0 1 1-1c.24.003.47.1.64.27Z"/></svg>
+        <svg className='svg' onClick={()=>setMenuOpen(false)} xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 15 15"><path fill="currentColor" d="M3.64 2.27L7.5 6.13l3.84-3.84A.92.92 0 0 1 12 2a1 1 0 0 1 1 1a.9.9 0 0 1-.27.66L8.84 7.5l3.89 3.89A.9.9 0 0 1 13 12a1 1 0 0 1-1 1a.92.92 0 0 1-.69-.27L7.5 8.87l-3.85 3.85A.92.92 0 0 1 3 13a1 1 0 0 1-1-1a.9.9 0 0 1 .27-.66L6.16 7.5L2.27 3.61A.9.9 0 0 1 2 3a1 1 0 0 1 1-1c.24.003.47.1.64.27Z"/></svg>
     </div>
     
     </>

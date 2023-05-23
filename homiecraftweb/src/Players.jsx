@@ -18,18 +18,18 @@ function Playerbox(props) {
           <div className="playerinfo"><h2 className='name'>{props.name}</h2><h4 className='desc'>{props.desc}</h4></div>
           <div className="infobtn" onClick={() => setMenuOpen(!menuOpen)} ><h3 className='btntxt'>MORE INFO</h3></div>
         </div>
-        {menuOpen && <Player_profile name={props.name} value={[menuOpen,setMenuOpen]}/>}
+        {menuOpen && <Player_profile menuOpen={menuOpen} setMenuOpen={setMenuOpen} name={props.name}/>}
       </>
     )
 }
 
  function Players(){
-  const [menuOpen,setMenuOpen] = useState(false)
   const names = ['Skullable','OnyxRare','Lime_Terror','mmessedd','Mr_Minehunter','Mgoku42','Unknownghost__'];
   const nameList = names.map((name, index) => (
-    <><Playerbox name={name} key={index}>{name}</Playerbox>
-{/*    <Player_profile name={name}></Player_profile>*/}</>
+    <><Playerbox menuOpen={menuOpen} setMenuOpen={setMenuOpen}name={name} key={index} >{name}</Playerbox>
+    </>
   ));
+  
     return (
       <div className="container">
         <h1 className='title'>MEMBERS</h1>
