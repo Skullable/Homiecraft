@@ -45,7 +45,6 @@
         border-radius: 25px;
 
         .skinwrapper{
-            flex: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -53,7 +52,6 @@
     
             .skin{
                 min-width: 200px;
-                max-width: 400px;
             }
             
             .downloadbtn{
@@ -90,7 +88,6 @@
         }
     
         .playerinfo{
-            flex: 50%;
             display: flex;
             flex-direction: column;
             padding: 100px;
@@ -100,7 +97,7 @@
                 border-radius: 12px;
                 background-color: #3e4146;
                 color: #f0f0f1;
-                min-width: 80%;
+                min-width: 400px;
     
                 .h2{
                     font-family: 'Roboto', sans-serif;
@@ -127,6 +124,7 @@
             .wrapper{
                 flex-direction: row;
 
+
                 .playerinfo{
                     padding: 20px;
                     .txt{
@@ -139,17 +137,71 @@
 
         }
 }
+@media (max-width:1110px) {
+    .menu{
+        .wrapper{
+            .skinwrapper{
+                .skin{
+                    min-width: 150px;
+                }
+            }
+        }
+    }
+    
+}
 
 @media (max-width:950px) {
     .menu{
         //            flex-direction: column;
         
                     .wrapper{
-                        flex-direction: row;
         
                         .playerinfo{
                             padding: 20px;
                             .txt{
+                                .h2{
+                                  font-size: 14px;
+                                }
+                            }
+                        }
+                        }
+        
+                }
+}
+@media (max-width:890px) {
+    .menu{        
+                    .wrapper{
+                        .skinwrapper{
+                            .skin{
+                                min-width: 100px;
+                            }
+                        }
+        
+                        .playerinfo{
+                            padding: 20px;
+                            .txt{
+                                margin: 4px;
+                                min-width: 250px;
+                                .h2{
+                                  font-size: 14px;
+                                }
+                            }
+                        }
+                        }
+        
+                }
+}
+
+@media (max-width:350px) {
+    .menu{
+        //            flex-direction: column;
+        
+                    .wrapper{
+        
+                        .playerinfo{
+                            padding: 20px;
+                            .txt{
+                                min-width: 220px;
                                 .h2{
                                   font-size: 14px;
                                 }
