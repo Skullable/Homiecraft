@@ -111,3 +111,37 @@
     animation:  none;
     transition: 1s;
 }
+
+@media (max-width:950px){
+  .box{
+    width: 200px;
+    height: 400px;
+    .playerinfo{
+      .name{
+        font-size: 24px;
+      }
+    }
+  }
+}
+@media (max-width:950px){
+  .box{
+    width: 250px;
+    height: 400px;
+    .playerinfo{
+      .name{
+        font-size: 24px;
+      }
+    }
+  }
+}
+@media (max-width:620px){
+  .box{
+    width: 300px;
+    height: 380px;
+    .playerinfo{
+      .name{
+        font-size: 24px;
+      }
+    }
+  }
+}
