@@ -52,6 +52,7 @@
             min-width: 400px;
     
             .skin{
+                min-width: 200px;
                 max-width: 400px;
             }
             
@@ -98,7 +99,7 @@
                 border-radius: 12px;
                 background-color: #3e4146;
                 color: #f0f0f1;
-                max-width: 500px;
+                min-width: 500px;
     
                 .h2{
                     font-family: 'Roboto', sans-serif;
@@ -129,7 +130,7 @@
                     padding: 20px;
                     .txt{
                         .h2{
-                          font-size: 16px;
+                          font-size: 19px;
                         }
                     }
                 }
